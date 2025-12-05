@@ -6,6 +6,8 @@ import '../../features/accounts/presentation/pages/account_form_page.dart';
 import '../../features/dashboard/presentation/pages/dashboard_page.dart';
 import '../../features/transactions/presentation/pages/transactions_page.dart';
 import '../../features/transactions/presentation/pages/transaction_form_page.dart';
+import '../../features/investments/presentation/pages/investments_page.dart';
+import '../../features/monthly_payments/presentation/pages/monthly_payments_page.dart';
 import '../../core/theme/theme.dart';
 
 part 'app_router.gr.dart';
@@ -117,11 +119,7 @@ class InvestmentsTabPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.background,
-      appBar: AppBar(title: const Text('Investments')),
-      body: const Center(child: Text('Coming soon...')),
-    );
+    return const InvestmentsPage();
   }
 }
 
@@ -131,11 +129,7 @@ class MonthlyPaymentsTabPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.background,
-      appBar: AppBar(title: const Text('Monthly Payments')),
-      body: const Center(child: Text('Coming soon...')),
-    );
+    return const MonthlyPaymentsPage();
   }
 }
 

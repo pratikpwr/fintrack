@@ -4,6 +4,7 @@ import '../../../../core/di/injection.dart';
 import '../../../../core/theme/theme.dart';
 import '../../../../core/widgets/widgets.dart';
 import '../../../transactions/presentation/widgets/transaction_list_tile.dart';
+import '../../../imports/presentation/pages/import_page.dart';
 import '../bloc/dashboard_bloc.dart';
 import '../widgets/net_worth_card.dart';
 import '../widgets/account_summary_card.dart';
@@ -215,13 +216,19 @@ class DashboardPageContent extends StatelessWidget {
         AppSpacing.hGapSm,
         Expanded(
           child: _QuickActionButton(
-            icon: Icons.swap_horiz_rounded,
-            label: 'Transfer',
+            icon: Icons.upload_file_rounded,
+            label: 'Import',
             color: AppColors.info,
-            onTap: () {},
+            onTap: () => _navigateToImport(context),
           ),
         ),
       ],
+    );
+  }
+
+  void _navigateToImport(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (_) => const ImportPage()),
     );
   }
 
